@@ -11,9 +11,36 @@ package javatp1;
 public class basketteur extends Athlète{
       int NB_titre_NBA;
 
-    public basketteur(String nom, int age, String sport) {
+    public basketteur(int NB_titre_NBA, String nom, int age, String sport) {
         super(nom, age, sport);
+        this.NB_titre_NBA = NB_titre_NBA;
     }
+
+    public void marquerPanier() {
+        System.out.println(nom + " marque un panier !");
+    }
+
+    @Override
+    public String toString() {
+        return "basketteur{" + "NB_titre_NBA=" + NB_titre_NBA + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final basketteur other = (basketteur) obj;
+        return this.NB_titre_NBA == other.NB_titre_NBA;
+    }
+    
+    
       
     
 }

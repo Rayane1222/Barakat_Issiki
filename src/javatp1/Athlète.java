@@ -23,4 +23,19 @@ public class Athlète {
         System.out.println(nom + " s'entraîne pour améliorer ses performances.");
     }
 
+    @Override
+    public String toString() {
+        return "Athl\u00e8te{" + "nom=" + nom + ", age=" + age + ", sport=" + sport + '}';
+    }
+
+    public String getSport() {
+        return sport;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
+    }
+
+    
+    
 }
